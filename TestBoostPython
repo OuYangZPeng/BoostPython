@@ -1,0 +1,19 @@
+#include "stdafx.h"
+
+#include<string>
+#include<boost/python.hpp>
+
+using namespace std;
+using namespace boost::python;
+
+
+char const * greet()
+{
+	return "hello,world";
+
+}
+
+BOOST_PYTHON_MODULE(TestBoostPython)
+{
+	def("greet", greet);
+}
